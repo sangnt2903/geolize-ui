@@ -22,8 +22,6 @@ const Sidebar: React.FC = () => {
 
   const navItems = [
     { path: '/ip-lookup', label: 'IP Lookup', icon: FaSearch },
-    { path: '/ip-ranges', label: 'IP Ranges', icon: FaList },
-    { path: '/settings', label: 'Settings', icon: FaCog },
   ];
 
   return (

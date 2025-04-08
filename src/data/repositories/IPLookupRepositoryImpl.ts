@@ -3,8 +3,8 @@ import { IPLookupRepository } from '../../domain/usecases/IPLookupUseCase';
 
 export class IPLookupRepositoryImpl implements IPLookupRepository {
   async getIPDetails(ip: string): Promise<IPDetails> {
-    const apiHost = process.env.REACT_APP_API_HOST;
-    const lookupIpEndpoint = process.env.REACT_APP_LOOKUP_IP_ENDPOINT;
+    const apiHost = process.env.REACT_APP_GEOLIZE_API_HOST;
+    const lookupIpEndpoint = process.env.REACT_APP_GEOLIZE_API_LOOKUP_IP_ENDPOINT;
 
     const response = await fetch(`${apiHost}${lookupIpEndpoint}?ips=${ip}`, {
       headers: {
@@ -21,8 +21,8 @@ export class IPLookupRepositoryImpl implements IPLookupRepository {
 
 export class IPModifyRepositoryImpl {
   async modifyIPDetails(data: IPDetails): Promise<void> {
-    const apiHost = process.env.REACT_APP_API_HOST;
-    const modifyIpEndpoint = process.env.REACT_APP_MODIFY_IP_ENDPOINT;
+    const apiHost = process.env.REACT_APP_GEOLIZE_API_HOST;
+    const modifyIpEndpoint = process.env.REACT_APP_GEOLIZE_API_MODIFY_IP_ENDPOINT;
 
     const response = await fetch(`${apiHost}${modifyIpEndpoint}`, {
       method: 'POST',

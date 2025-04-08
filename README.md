@@ -1,5 +1,10 @@
 # Getting Started with Geolize UI
 
+
+## Setup
+
+    cp .env.example .env
+
 ## Available Scripts
 
 In the project directory, you can run:
